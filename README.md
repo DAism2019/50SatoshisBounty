@@ -1,4 +1,4 @@
-# 50SatoshisBounty
+# 50Satoshis Bounty
 The Satoshi UTO Fund was forged by 50 anonymous participants, each contributing 0.02 ETH. To commemorate the successful establishment of the Satoshi UTO Fund, recognize the contributions of these 50 Satoshis, and to permanently preserve the reward model of the public fund designed by Satoshi Nakamoto in Bitcoin's Proof of Work (PoW) system (which could not continue operating for the next 16 years due to security issues), we are replicating the reward rules of Bitcoin's PoW in the name of Satoshi Nakamoto.
 
 - The total prize pool is 21,000,000 UTO, which is equivalent to 21,000,000 jeedd (price unit).
