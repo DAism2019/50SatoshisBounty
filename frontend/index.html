@@ -11,18 +11,6 @@
 	<div id="loading-overlay">
         <div id="loading-message">Withdrawing balance...</div>
     </div>
-
-	 <!-- 钱包登录区 -->
-	<div class="wallet">
-		<div id="wallet-selector"></div>
-		<div class="wallet-disconnect" style="display: none;" >
-			<button id="disconnect-button" class="disconnect-button">Disconnect</button>
-			<button onclick="withdraw()" class="Withdraw-button">Withdraw My Reward</button>
-			<span id="utoValue"> UTO</span>
-		</div>
-	<p id="status"></p>
-	</div>
-
 	<!-- 顶部SVG -->
 	<div style="margin: 0 auto;height: 100vh; text-align: center; ">
 		<img src="./head.svg" style="height: 100%;" alt="" />
@@ -62,15 +50,27 @@
             </div>
         </div>
     </div>
-	<div style="display: flex;justify-content:flex-end; width: 90%; margin: 0 auto; ">
+	<div style="display: flex;align-items: center;flex-wrap: wrap;justify-content: space-between;  width: 90%; margin: 0 auto; ">
 		<!-- 中心流支付模型 -->
-		<div id="mindmap-container">
+		<div id="mindmap-container"  >
 			<!-- 动态加载的流支付模型 -->
 		</div>
-	<div class="svg">
-		<img src="./honor.svg" alt="" />
-		<p>Layout of 50 Honor Tokens</p>
-	</div>
+		
+	 <!-- 钱包登录区 -->
+		<div  >
+			<div id="wallet-selector"></div>
+			<div class="wallet-disconnect" style="display: none;" >
+				<button id="disconnect-button" class="disconnect-button">Disconnect</button>
+				<button onclick="withdraw()" class="Withdraw-button">Withdraw My Reward</button>
+				<span id="utoValue"> UTO</span>
+			</div>
+			<p id="status"></p>
+		</div>
+		<!-- 荣誉通证 logo -->
+		<div style="text-align: center;" >
+			<img src="./honor.svg" alt="" />
+			<p>Layout of 50 Honor Tokens</p>
+		</div>
 
  </div>
 

@@ -1,5 +1,4 @@
 
-.wallet{position: absolute;right: 0; top:0; }
 
 #walletSelector{ margin: 0; border: 1px solid blue; }
 .wallet-list {
@@ -12,11 +11,23 @@
 }
 .wallet-button {
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+    /* background-color: #4CAF50; */
+    /* color: white; */
+    /* border: none; */
+    /* cursor: pointer; */
+    border:0;
+    background-color:#003C9D;
+    color:#fff;
+    border-radius:10px;
+    cursor:pointer;
 }
+
+.wallet-button:hover{
+    color:#003C9D;
+    background-color:#fff;
+    border:2px #003C9D solid;
+  }
+
  .disconnect-button {
     padding: 10px 20px;
     background-color: #f44336; /* Red color for disconnect */

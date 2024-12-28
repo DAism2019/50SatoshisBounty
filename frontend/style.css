@@ -19,12 +19,12 @@
             /* display: flex;
             justify-content: center;
             align-items: center; */
-            width: 100%;
+            width: 680px;
             height: 480px;
             margin: 40px 0;
             position: relative;
         }
-        .mindmap-node {
+        /* .mindmap-node {
             position: absolute;
             text-align: center;
             font-size: 16px;
@@ -33,7 +33,7 @@
         .mindmap-node .reward {
             font-size: 16px;
             color: red;
-        }
+        } */
         .footer {
             text-align: center;
             font-size: 0.9em;
@@ -71,10 +71,7 @@
     background-color: #d1d1d1;
     padding: 20px;
 }
-        .svg{
-          display: inline-block;
-          margin: auto;
-        }
+      
         .header, .info, .bounty, .footer {
             margin-bottom: 20px;
         }
@@ -251,7 +248,6 @@ ul {
 		justify-content:left;
 		align-items:center;
 		width:55%;
-		/* background-image: url('takingabreak.png'); background-size:500px 395px; background-repeat: no-repeat;background-position: center;*/
         }
 	
 	.st-button input{border:0;
@@ -267,12 +263,4 @@ ul {
 				  border:2px #003C9D solid;
 				}
 
-	.svg {
-		display:inline-block;
-		vertical-align:middle;
-		text-align:left;
-		margin-right:50px;
-	}
-	.svg p{
-		margin-left:20px;
-	}
+
