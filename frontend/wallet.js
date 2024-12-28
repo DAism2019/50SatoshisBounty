@@ -566,7 +566,7 @@ async function detectWallets() {
 
   filteredProviders.forEach(async (provider, index) => {
       const listItem = document.createElement('li');
-      listItem.style.border='1px solid yellow';
+      // listItem.style.border='1px solid yellow';
       const button = document.createElement('button');
 
       let walletName;
