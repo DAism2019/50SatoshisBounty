@@ -1,0 +1,52 @@
+    .header, .info, .bounty, .footer {
+        margin-bottom: 20px;
+    }
+
+    #mindmap-container {
+        width: 680px;
+        height: 480px;
+        margin: 40px 0;
+        position: relative;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 1em;
+        color: #666;
+    }
+
+	.zi_box_1 {
+	border: 2px solid #69b4ff;
+	max-width:92%;
+	margin: 10px auto 30px auto;
+	padding: 20px;
+	position: relative;
+	box-shadow: 2px 2px 1px #c7c7c7;
+	border-radius: 8px;
+	}
+	.zi_box_1::before {
+	background-color: #fff;
+	color: #69b4ff;
+	content: "Progress of 50Satoshis Bounty";
+	font-weight: bold;
+	left: 1em;
+	padding: 0 .5em;
+	position: absolute;
+	top: -1em;
+	}
+
+    .progress-bar {
+        width: 100%;
+        background-color: #f3f3f3;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+    .progress-bar div {
+        height: 20px;
+        background-color: #4caf50;
+        width: 0%;
+        transition: width 0.5s;
+        
+    }
