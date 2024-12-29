@@ -2,7 +2,9 @@
 	 viewBox="0 0 1851.088 1667.617" style="enable-background:new" height="1100px" xml:space="preserve">
 <style type="text/css">
 	.st0{enable-background:new;}.st1{fill:#E6E6E6;} .st2{fill:#D44117;}	.st3{fill:#F2A438;}	.st4{fill:#6BB427;}	.st5{fill:#5775B1;}
-	.sufb{font-size:40px;text-anchor:middle;stroke:#643C00;text-shadow:-9px -5px 9px #fff;}@keyframes stroke{100% {stroke-dashoffset:-400;}}
+	.suft{text-anchor: start; font-size:1.5em;}
+	.suft2{text-anchor: start; font-size:1.6em;}
+	.sufb{font-size:40px;text-anchor:start;stroke:#643C00;text-shadow:-9px -5px 9px #fff;}@keyframes stroke{100% {stroke-dashoffset:-400;}}
 </style>
 <g id="250s">
 	<use href="#50s" x="-3" y="0" class="st1" />
@@ -64,12 +66,12 @@
 <use href="#250s" x="236" y="78" transform="rotate(-14)" class="st3" />
 <use href="#250s" x="8" y="325" transform="rotate(-28)" class="st4" />
 <use href="#250s" x="-292" y="524" transform="rotate(-43)" class="st5" />
-	<text x="50%" y="30%" class="sufb">Satoshi UTO Fund (SUF)</text>
-	<text x="14%" y="35%" font-size="1.4em" text-anchor="start">Inheriting Satoshi Nakamoto's governance philosophy in Bitcoin's PoW, a fair and transparent public fund forged through ETH.</text>
-	<text x="16%" y="40%" font-size="1.4em" text-anchor="start">It joins the development power of Ethereum's smart contracts and their self-executing ability to resist human's rig.</text>
-	<text x="22%" y="45%" font-size="1.4em" text-anchor="start">The Satoshi UTO Fund will provide financial support for human incentives, welfare, and relief.</text>
-	<text x="28%" y="50%" font-size="1.4em" text-anchor="start">It's forged by a group of anonymous participants with 50 wallet addresses.</text>
-	<text x="31%" y="55%" font-size="1.4em" text-anchor="start">Smart Contract：<a href="https://etherscan.io/token/0xe40b05570d2760102c59bf4ffc9b47f921b67a1f"  target="_blank">0xe40b05570d2760102c59bF4ffc9b47f921B67a1F</a></text>
-	<text x="31%" y="60%" font-size="1.4em" text-anchor="start">UTO Forged：1.15792 × 10^59 jeedd</text>
-	<text x="31%" y="65%" font-size="1.4em" text-anchor="start">Forging Time：2024-11-21 15:27:11</text>
+	<text x="40%" y="30%" class="sufb">Satoshi UTO Fund (SUF)</text>
+	<text x="22%" y="35%" class="suft">Inheriting Satoshi Nakamoto's governance philosophy in Bitcoin's PoW, and forged through ETH.</text>
+	<text x="15%" y="40%" class="suft">It joins the development power of Ethereum's smart contracts and their self-executing ability to resist human's rig.</text>
+	<text x="22%" y="45%" class="suft">The Satoshi UTO Fund will provide financial support for human incentives, welfare, and relief.</text>
+	<text x="23%" y="50%" class="suft">Special thanks to a group of anonymous participants forged SUF with 50 wallet addresses.</text>
+	<text x="30%" y="55%" class="suft2">Smart Contract：<a href="https://etherscan.io/token/0xe40b05570d2760102c59bf4ffc9b47f921b67a1f"  target="_blank">0xe40b05570d2760102c59bF4ffc9b47f921B67a1F</a></text>
+	<text x="35%" y="60%" class="suft2">Total Amount：1.15792 × 10^59 UTO/jeedd</text>
+	<text x="38%" y="65%" class="suft2"">Forging Time：2024-11-21 15:27:11</text>
 </svg>
