@@ -133,6 +133,10 @@
 .tab-content.active li{
     margin-bottom: 10px;
 }
+.tab-content.active p{
+    margin-bottom: 10px;
+	font-size: 16px;
+}
 .tab-head{
     
     line-height: 23px;
