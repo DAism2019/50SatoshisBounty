@@ -1,7 +1,8 @@
 //合约地址
-const contractAddress="0xA992b698D1ae6811068A0B30AA51410Ac82b2859";//"0x88eF10710F37C74CD29d83f781cCb14F51f3Bf6F";
+const contractAddress="0x0E646017Cbdd9Be8927A68E31079d7b0aaB9C284";
+//"0xA992b698D1ae6811068A0B30AA51410Ac82b2859";//"0x88eF10710F37C74CD29d83f781cCb14F51f3Bf6F";
 //发送计算请求的钱包地址
-let getAddress=""; //'0x5aD91dCCD7b5F15A454213B36aaDa82a8FbD4ea2';
+let getAddress=""; 
 //中心点
 const centerNode = { id: 'center', x: 50, y: 50, reward: 21000000, text: 'Prize Pool' };
 //50个帐号
