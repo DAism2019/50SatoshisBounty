@@ -105,7 +105,7 @@
     border-bottom: none; /* Remove bottom border to merge with the line below */
     background-color: #f1f1f1;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.125rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     transition: background-color 0.3s;
@@ -132,10 +132,15 @@
 }
 .tab-content.active li{
     margin-bottom: 10px;
+	font-size: 1rem;
+}
+.tab-content.active p{
+    margin-bottom: 10px;
+	font-size: 1rem;
 }
 .tab-head{
     
     line-height: 23px;
-    font-size: 1em;
+    font-size: 1rem;
 
 }
