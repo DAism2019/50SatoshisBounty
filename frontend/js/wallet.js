@@ -1,13 +1,15 @@
 //合约地址
-const contractAddress="0x0E646017Cbdd9Be8927A68E31079d7b0aaB9C284";
-//"0xA992b698D1ae6811068A0B30AA51410Ac82b2859";//"0x88eF10710F37C74CD29d83f781cCb14F51f3Bf6F";
+const contractAddress="0x21B716658ee58ccbC15D7aB6f2bdD4F5cF92ECE8";
 //发送计算请求的钱包地址
 let getAddress=""; 
 //中心点
-const centerNode = { id: 'center', x: 50, y: 50, reward: 21000000, text: 'Prize Pool' };
+const centerNode = { id: 'center', x: 0, y: 50, reward: 21000000, text: 'Prize Pool' };
 //50个帐号
 const participants=[];
-
+let login_address='';
+let ra=document.documentElement.clientWidth;
+const NET={'_0xaa36a7':'sepolia','_0x4268':'holesky','_0x1':'mainnet','_11155111':'sepolia','_17000':'holesky',"_1":"mainnet"}
+const SAnetworkName='sepolia';
 const walletSelector = document.getElementById('wallet-selector');
 const statusDisplay = document.getElementById('status');
 const utoValueSpan = document.getElementById('utoValue');
@@ -92,13 +94,19 @@ async function connectWallet(provider,index) {
 
           await selectedProvider.request({ method: 'eth_requestAccounts' });
           provider = new ethers.BrowserProvider(selectedProvider);
+          const network=await provider.getNetwork();
+          let tempChainId = network.chainId.toString();
+          if(NET[`_${tempChainId}`]!=SAnetworkName){
+            alert("Please log in to the "+SAnetworkName+" network!")
+            return false;
+          }
           window.login_signer = await provider.getSigner();
-          address = await window.login_signer.getAddress();
+          login_address = await window.login_signer.getAddress();
           isConnected = true;
           updateUI();
-          statusDisplay.textContent = `${address}`;
+          statusDisplay.textContent = `${login_address}`;
           setTimeout(async function(){
-            await refreshUtoValue(address)
+            await refreshUtoValue()
           },10)
           
 
@@ -129,9 +137,11 @@ async function connectWallet(provider,index) {
         }
   }
 
-  async function refreshUtoValue(address) {
-        const res=await window.daism_contract.getTotalCumulativeReward(address);
-        utoValueSpan.innerHTML=`${window.ethers.formatUnits(res,8)} UTO`
+  async function refreshUtoValue() {
+    if(login_address) {
+        const res=await window.daism_contract.getTotalCumulativeReward(login_address);
+        utoValueSpan.innerHTML=`${window.ethers.formatUnits(res,8)} UTO`;
+    }
   }
 
   disconnectButton.addEventListener('click', disconnectWallet);
@@ -141,7 +151,7 @@ async function connectWallet(provider,index) {
     try {   
     showLoadingOverlay();
     console.log("begin...............")
-      const contract = new window.ethers.Contract(contractAddress, abi, window.login_signer);
+      const contract = new window.ethers.Contract(contractAddress, window.daism_abi, window.login_signer);
       let res=await contract.withdraw();
       await res.wait(1)
       
@@ -180,7 +190,7 @@ function enablePageInteraction() {
 function createNode({ id, x, y, text, reward }) {
   const div = document.createElement('div');
   div.id = id;
-  div.style.width = '160px';
+  div.style.width = '10rem';
   div.style.height = '28px';
   div.style.position = 'absolute';
   div.style.textAlign = 'center';
@@ -190,7 +200,7 @@ function createNode({ id, x, y, text, reward }) {
   div.style.backgroundColor = '#f0f0f0';
 
   // div.className = 'mindmap-node';
-  div.style.left = `${x + 210}px`; // 中心偏移
+  div.style.left = `${x +(ra>900?210:ra/4-10) }px`; // 中心偏移
   div.style.top = `${y + 150}px`; // 中心偏移
   div.innerHTML = `<strong>${text}</strong>：<span class="reward">${reward.toFixed(0)} UTO</span>`;
   mindmapContainer.appendChild(div);
@@ -211,6 +221,7 @@ function createNode({ id, x, y, text, reward }) {
   const overallProgress = (totalProgress*50 / centerNode.reward) * 100;
   progressBarSummary.style.width = `${overallProgress}%`;
   progressPercent.textContent = `${overallProgress.toFixed(2)}%`;
+  await refreshUtoValue()
 }
 
   // 渲染流支付模型
@@ -240,6 +251,7 @@ function createNode({ id, x, y, text, reward }) {
     window.daism_contract =await new window.ethers.Contract(contractAddress, window.daism_abi, wallet_provider);
     let memberAr=await window.daism_contract.getAllParticipants();
     getAddress=memberAr[36];
+
     //50个中本聪赋值
     memberAr.forEach((str,i) =>{participants.push({
       id: `p${i + 1}`,
@@ -247,8 +259,8 @@ function createNode({ id, x, y, text, reward }) {
       // text: str,
       reward: 0,
       maxReward: centerNode.reward / 50,
-      x: 50 + 220 * Math.cos((i / 50) * 2 * Math.PI),
-      y: 50 + 220 * Math.sin((i / 50) * 2 * Math.PI)
+      x: (ra>900?220:ra/4) * Math.cos((i / 50) * 2 * Math.PI),
+      y: 50+220* Math.sin((i / 50) * 2 * Math.PI)
      })});
     
         // 初始化
